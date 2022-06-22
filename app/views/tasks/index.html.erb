@@ -5,27 +5,27 @@
 <div class = container>
  <div class="row align-items-center justify-content-center">
   <div class="col-4">
-        <h3>Create Task</h3>
+        <h5>Create Task</h5>
   </div>
     <div class="col-4">
-        <h3>Pending Tasks</h3>
+        <h5>Pending Tasks</h5>
    </div>
   <div class="col-4">
-        <h3>Completed Tasks</h3>
+        <h5>Completed Tasks</h5>
   </div>
  </div>
  <div class="row align-items-center justify-content-center">
   <div class="col-4">
-        <%= button_to "+ New", new_task_path, method: :get %>
+        <h6><span style="font-weight:normal"><%= button_to "+ New", new_task_path, method: :get %></span></h6>
   </div>
     <div class="col-4">
         <% @pending_tasks.each do |task| %>
-        <%= link_to task.name, task_path(task) %>
+        <h6><span style="font-weight:normal"><%= link_to task.name, task_path(task) %></span></h6>
         <% end %>
    </div>
   <div class="col-4">
         <% @completed_tasks.each do |task| %>
-        <p><%= link_to task.name, task_path(task) %></p>
+        <h6><span style="font-weight:normal"><%= link_to task.name, task_path(task) %></span></h6>
         <% end %>
   </div>
  </div>
