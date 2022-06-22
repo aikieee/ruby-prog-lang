@@ -1,17 +1,33 @@
-<h1>TASKS LIST</h1>
+<div class = "d-flex align-items-center justify-content-center">
+    <h1>Tasks List</h1>
+</div>
+<br>
+<div class = container>
+ <div class="row align-items-center justify-content-center">
+  <div class="col-4">
+        <h3>Create Task</h3>
+  </div>
+    <div class="col-4">
+        <h3>Pending Tasks</h3>
+   </div>
+  <div class="col-4">
+        <h3>Completed Tasks</h3>
+  </div>
+ </div>
+ <div class="row align-items-center justify-content-center">
+  <div class="col-4">
+        <%= button_to "+ New", new_task_path, method: :get %>
+  </div>
+    <div class="col-4">
+        <% @pending_tasks.each do |task| %>
+        <%= link_to task.name, task_path(task) %>
+        <% end %>
+   </div>
+  <div class="col-4">
+        <% @completed_tasks.each do |task| %>
+        <p><%= link_to task.name, task_path(task) %></p>
+        <% end %>
+  </div>
+ </div>
+</div>
 
-<%= button_to "Create Task", new_task_path, method: :get %>
-
-<h3>Pending Tasks</h3>
-<ul>
-<% @pending_tasks.each do |task| %>
-    <li><%= link_to task.name, task_path(task) %></li>
-<% end %>
-</ul>
-
-<h3>Completed Tasks</h3>
-<ul>
-<% @completed_tasks.each do |task| %>
-    <li><%= link_to task.name, task_path(task) %></li>
-<% end %>
-</ul>
