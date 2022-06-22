@@ -1,9 +1,16 @@
-<h1><%= @task.name %></h1>
-
-<p><%= @task.description %></p>
-
-<h3><%= @task.bucket.name %></h3>
-
-<h6><%= @task.status %></h6>
-
-<%= button_to "Edit task", edit_task_path(@task), method: :get %>
+<br><br><br>
+<div class = "d-flex align-items-center justify-content-center">
+    <h1>Task Name: <%= @task.name %></h1>
+</div>
+<div class = "d-flex align-items-right justify-content-center">
+    <br><p>Desciption: <%= @task.description %></p><br><br>
+</div>
+<div class = "d-flex align-items-center justify-content-center">
+    <h3>Bucket: <%= @task.bucket.name %></h3>
+</div>
+<div class = "d-flex align-items-center justify-content-center">
+    <h6>Status: <%= @task.status %></h6><br><br>
+</div>
+<div class = "d-flex align-items-center justify-content-center">
+    <%= button_to "Edit task", edit_task_path(@task), method: :get %>
+</div>
