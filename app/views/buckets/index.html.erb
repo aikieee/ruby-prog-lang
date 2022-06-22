@@ -1,24 +1,40 @@
-<h1>BUCKETS LIST</h1>
+<div class="d-flex align-items-center justify-content-center">
+    <h1>BUCKETS LIST</h1>
+    <br><br>
+</div>
 
-<%= button_to "Create Bucket", new_bucket_path, method: :get %>
+<div class="d-flex align-items-center justify-content-center">
+    <%= button_to "Create Bucket", new_bucket_path, method: :get %>
+    <br><br><br>
+</div>
 
-<h3>Empty Buckets</h3>
-<ul>
-<% @empty_buckets.each do |bucket| %>
-    <li><%= link_to bucket.name, bucket_path(bucket) %></li>
-<% end %>
-</ul>
-
-<h3>Pending Buckets</h3>
-<ul>
-<% @pending_buckets.each do |bucket| %>
-    <li><%= link_to bucket.name, bucket_path(bucket) %></li>
-<% end %>
-</ul>
-
-<h3>Completed Buckets</h3>
-<ul>
-<% @completed_buckets.each do |bucket| %>
-    <li><%= link_to bucket.name, bucket_path(bucket) %></li>
-<% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h3>Empty Buckets</h3>
+    </div>
+    <div class="col-4">
+      <h3>Pending Buckets</h3>
+    </div>
+    <div class="col-4">
+      <h3>Completed Buckets</h3>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-4">
+        <% @empty_buckets.each do |bucket| %>
+           <p><%= link_to bucket.name, bucket_path(bucket) %></p>
+        <% end %>
+    </div>
+    <div class="col-4">
+        <% @pending_buckets.each do |bucket| %>
+            <p><%= link_to bucket.name, bucket_path(bucket) %></p>
+        <% end %>
+    </div>
+    <div class="col-4">
+        <% @completed_buckets.each do |bucket| %>
+            <p><%= link_to bucket.name, bucket_path(bucket) %></p>
+        <% end %>
+    </div>
+  </div>
+</div>
