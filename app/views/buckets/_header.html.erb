@@ -1,19 +1,20 @@
-<nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-primary" role="naviagtion">
+<nav class="navbar navbar-default navbar-expand-lg navbar-dark" style="background-color: #1d2671;" role="naviagtion">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand fs-2 fw-semibold">Task Management System</a>
+    <span class="navbar-brand mb-0 h1 fs-2 fw-semibold">Task Management System</span>
   </div>  
     
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
       <ul class="nav navbar-nav">
-        <li> 
-            <%= link_to "All Buckets", buckets_path, class: "nav-link fs-5" %>
+        <li class="nav-item"> 
+            <%= link_to "All Buckets", buckets_path, class: "nav-link fs-5 mb-0 h1", display: "inline" %>
         </li>
-        <li> 
-          <%= link_to "All Tasks", tasks_path, class: "nav-link fs-5" %> 
+        <li class="nav-item"> 
+          <%= link_to "All Tasks", tasks_path, class: "nav-link fs-5 mb-0 h1", display: "inline" %> 
         </li>
       </ul>
     </div> 
+
 </nav>
