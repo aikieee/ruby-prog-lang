@@ -12,7 +12,8 @@
         <div class="p-2"><%= f.text_area :description%><br></div>
         <div class="p-2"><%= f.label "Bucket"%></div>
         <div class="p-2"><%= f.collection_select :bucket_id, Bucket.order(:name),:id, :name %><br></div>
-         <div class="p-2"><%= f.collection_select :priority_id, Priority.order(:name),:id, :name %><br></div>
+        <div class="p-2"><%= f.label "Priority"%></div>
+        <div class="p-2"><%= f.collection_select :priority_id, Priority.order(:name),:id, :name %><br></div>
         <div class="p-2"><%= f.check_box :status, {}, "Completed", "Pending" %> Completed?<br></div>
 </div>
 <br>

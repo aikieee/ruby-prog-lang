@@ -16,3 +16,74 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+.body {
+    background-color: #ededed;
+    height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    color:#1b2459;
+  }
+
+.Back {
+    text-align: center;
+    margin-top: 15px;
+    margin-left:1200px;
+    padding: 8px;
+    border-radius: 15px;
+    display:block;
+    height: 40px;
+    width: 110px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 18px;
+}
+
+.taskName {
+  position: flex;
+  text-align:center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+.desLabel {
+  font-size: 20px;
+  font-weight: bold;
+  text-align:center;
+}
+
+.description{
+  text-align:center;
+  font-size: 18px;
+  padding: 0px 300px 0px 300px;
+
+}
+
+.showLabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content{
+  font-size: 18px;
+}
+
+.button {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 15px;
+  display:block;
+  height: 50px;
+  width: 140px;
+  background-color: #1b2459;
+  border-color: #1b2459;
+  color: white;
+  font-size: 18px;
+}
