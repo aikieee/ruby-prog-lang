@@ -175,3 +175,100 @@
   text-align: center;
   padding: 8px;
 }
+
+.content{
+  font-size: 18px;
+  margin-left: 36px;
+}
+
+.rightLabel{
+  margin-bottom: 15px;
+  margin-left: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b2459;
+}
+
+.bucketField{
+  margin-top: 19px;
+  margin-left: -60px;
+  width:315px;
+  border-left: white;
+  border-right: 2px inset white;
+  border-bottom: 3px inset;
+  border-top: solid #616771;
+  border-top-width: 10px;
+  padding: 10px;
+}
+
+.priorityLabel{
+  margin-left:-315px;
+  margin-top: 117px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b2459;
+}
+
+.priorityField{
+  margin-top: 159px;
+  margin-left: -315px;
+  width:315px;
+  border-left: white;
+  border-right: 2px inset white;
+  border-bottom: 3px inset;
+  border-top: solid #616771;
+  border-top-width: 10px;
+  padding: 10px;
+}
+
+.checkLabel{
+  font-size: 18px;
+  margin-left:-315px;
+  margin-top: 250px;
+}
+
+.createTaskButton{
+  text-align: center;
+  margin-top: -550px;
+  margin-left: 1180px;
+  border-radius: 10%/30%;
+  display: block;
+  height: 40px;
+  width: 150px;
+  background-color: #4267B3;
+  border-color: #4267B3;
+  color: white;
+  font-size: 17px;
+}
+
+
+.deleteTaskButton{
+  text-align: center;
+  margin-bottom:25px;
+  margin-top: -500px;
+  margin-left: -150px;
+  border-radius: 10%/30%;
+  display: block;
+  height: 40px;
+  width: 150px;
+  background-color: #4267B3;
+  border-color: #4267B3;
+  color: white;
+  font-size: 17px;
+}
+
+.cancelCreateButton{
+  text-align: center;
+  margin-bottom:25px;
+  margin-top: -450px;
+  margin-left: -150px;
+  border-radius: 10%/30%;
+  display: block;
+  height: 40px;
+  width: 150px;
+  background-color: #4267B3;
+  border-color: #4267B3;
+  color: white;
+  font-size: 17px;
+  padding: 8px;
+}
