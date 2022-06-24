@@ -1,13 +1,14 @@
 <div class = "subtitle d-flex justify-content-start">
     Create New Bucket
 </div>
-<br><br>
+<br>
 <div class="form d-flex justify-content-start">
     <%= form_for(@bucket) do |f| %>
         <%= f.label :name, class: "label"%><br>
         <%= f.text_field :name, class: "textField"%><br>
         <%= f.label :description,  class: "label"%><br>
         <%= f.text_area :description, class: "textArea"%><br>
-        <%= f.submit "Create Bucket", class: "submitButton"%><br>
+        <%= f.submit "Create Bucket", class: "submitButton  btn-primary"%><br>
     <% end %>
+    <%= link_to "Cancel", buckets_path, class: "cancelButton  btn-primary" %><br>
 </div>
