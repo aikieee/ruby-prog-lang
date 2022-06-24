@@ -37,8 +37,8 @@
     display:block;
     height: 40px;
     width: 110px;
-    background-color: #1b2459;
-    border-color: #1b2459;
+    background-color:#4267B3;
+    border-color: #4267B3;
     color: white;
     font-size: 18px;
 }
@@ -82,8 +82,96 @@
   display:block;
   height: 50px;
   width: 140px;
-  background-color: #1b2459;
-  border-color: #1b2459;
+  background-color: #4267B3;
+  border-color: #4267B3;
   color: white;
   font-size: 18px;
+}
+
+.subtitle {
+  margin-left: 35px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form {
+  margin-left: 35px;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b2459;
+  padding: 10px;
+}
+
+.textField {
+  margin-top: 10px;
+  margin-bottom:25px;
+  margin-left: 35px;
+  width:315px;
+  border-left: white;
+  border-right: 2px inset white;
+  border-bottom: 3px inset;
+  border-top: solid #616771;
+  border-top-width: 10px;
+  padding: 10px;
+}
+
+.textArea {
+  margin-top: 10px;
+  margin-bottom:25px;
+  margin-left: 35px;
+  width:315px;
+  height: 300px;
+  border-left: white;
+  border-right: 2px inset white;
+  border-bottom: 3px inset;
+  border-top: solid #616771;
+  border-top-width: 10px;
+  padding: 10px;
+}
+
+.submitButton{
+  margin-bottom:25px;
+  margin-top: -170px;
+  margin-left: 400px;
+  border-radius: 10%/30%;
+  display: block;
+  height: 40px;
+  width: 150px;
+  background-color: #4267B3;
+  border-color: #4267B3;
+  color: white;
+  font-size: 17px;
+}
+
+.deleteButton{
+  margin-bottom:25px;
+  margin-top: 350px;
+  margin-left: -150px;
+  border-radius: 10%/30%;
+  display: block;
+  height: 40px;
+  width: 150px;
+  background-color: #4267B3;
+  border-color: #4267B3;
+  color: white;
+  font-size: 17px;
+}
+
+.cancelButton{
+  margin-bottom:25px;
+  margin-top: 400px;
+  margin-left: -150px;
+  border-radius: 10%/30%;
+  display: block;
+  height: 40px;
+  width: 150px;
+  background-color: #4267B3;
+  border-color: #4267B3;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  padding: 8px;
 }
