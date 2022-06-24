@@ -4,7 +4,7 @@
 </div>
 <br>
 
-<div class="d-flex flex-column align-items-center justify-content-center">
+ <div class="d-flex flex-row row-align-items-start justify-content-center">
     <%= form_for(@task) do |f| %>
         <div class="p-2"><%= f.label :name%><br></div>
         <div class="p-2"><%= f.text_field :name%><br></div>
@@ -14,7 +14,17 @@
         <div class="p-2"><%= f.collection_select :bucket_id, Bucket.order(:name),:id, :name %><br></div>
          <div class="p-2"><%= f.collection_select :priority_id, Priority.order(:name),:id, :name %><br></div>
         <div class="p-2"><%= f.check_box :status, {}, "Completed", "Pending" %> Completed?<br></div>
-        <div class="p-2"><%= f.submit "Create Task",  class: "btn btn-primary" %></div>
-    <% end %>
-        <div><%= button_to "Delete Task", @task, class: "btn btn-primary", :method => :delete, data: {confirm: 'Are you sure?'} %></div>
+</div>
+<br>
+ <div class="d-flex flex-row justify-content-center">
+    <div class = "col-1">
+      <%= f.submit 'Create Task', :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+    <div class ="col-1">
+      <%= button_to "Delete Task", @task, :method => :delete, data: {confim: 'Are you sure?'}, :class => 'btn btn-primary' %>
+    </div>
+    <div class = "col-1">
+      <%=link_to "Cancel", tasks_path, class: 'btn btn-primary' %>
+    </div>
 </div>
