@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     end
 
     def create
-        @task = Task.create(task_params(:name, :description, :bucket_id))
+        @task = Task.create(task_params(:name, :description, :bucket_id, :priority_id))
         @task.status = "Pending"
         @task.save
         @task.bucket.update_status
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
 
     def update
         @task = Task.find(params[:id])
-        @task.update(task_params(:name, :description, :status, :bucket_id))
+        @task.update(task_params(:name, :description, :status, :bucket_id, :priority_id))
         @bucket = @task.bucket.update_status
         redirect_to task_path(@task)
     end
