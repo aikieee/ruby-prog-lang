@@ -1,44 +1,45 @@
+<br>
 <div class="d-flex align-items-center justify-content-center">
     <h1>BUCKETS LIST</h1>
 </div>
 <br>
+
 <div class="d-flex align-items-center justify-content-center">
-    <%= button_to "Create Bucket", new_bucket_path, class:"btn btn-primary", method: :get %>
+    <%= button_to "Create Bucket", new_bucket_path, class:"createBtn btn-primary", method: :get %>
 </div>
-<br>
+<br> <br>
 
 <div class="container text-center">
   <div class="row align-items-center justify-content-center">
     <div class="col-4">
-      <h5>Empty Buckets</h5>
+      <p class= "showLabel">Empty Buckets</p>
     </div>
     <div class="col-4">
-      <h5>Pending Buckets</h5>
+      <p class= "showLabel">Pending Buckets</p>
     </div>
     <div class="col-4">
-      <h5>Completed Buckets</h5>
+      <p class= "showLabel">Completed Buckets</p>
     </div>
   </div>
-  <div class="row align-items-center justify-content-center">
 
-
+  <div class="row align-self-start justify-content-center">
     <div class="col-4">
         <% @empty_buckets.each do |bucket| %>
-        <h6><span style="font-weight:normal"><%= link_to bucket.name, bucket_path(bucket) %></span></h6>
+        <p class= "bucketList"><span style="font-weight:normal"><%= link_to bucket.name, bucket_path(bucket), class: "link-dark" %></span></p>
         <% end %>
     </div>
 
 
     <div class="col-4">
         <% @pending_buckets.each do |bucket| %>
-        <h6><span style="font-weight:normal"><%= link_to bucket.name, bucket_path(bucket) %></span></h6>
+        <p class= "bucketList"><span style="font-weight:normal"><%= link_to bucket.name, bucket_path(bucket), class: "link-dark" %></span></p>
         <% end %>
     </div>
 
     
     <div class="col-4">
         <% @completed_buckets.each do |bucket| %>
-        <h6><span style="font-weight:normal"><%= link_to bucket.name, bucket_path(bucket) %></span></h6>
+        <p class= "bucketList"><span style="font-weight:normal"><%= link_to bucket.name, bucket_path(bucket), class: "link-dark" %></span></p>
         <% end %>
     </div>
   </div>
