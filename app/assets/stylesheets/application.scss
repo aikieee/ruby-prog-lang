@@ -14,139 +14,184 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
-.body {
-    background-color: #ededed;
-    height: 100vh;
-    font-family: "DM Sans", sans-serif;
-    display: flex;
-    flex-direction: column;
-    color:#1b2459;
-  }
-
-.Back {
-    text-align: center;
-    margin-top: 15px;
-    margin-left:1200px;
-    padding: 8px;
-    border-radius: 15px;
-    display:block;
-    height: 40px;
-    width: 110px;
-    background-color:#4267B3;
-    border-color: #4267B3;
-    color: white;
-    font-size: 18px;
-}
-
-.taskName {
-  position: flex;
-  text-align:center;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-
-.desLabel {
-  font-size: 20px;
-  font-weight: bold;
-  text-align:center;
-}
-
-.description{
-  text-align:center;
-  font-size: 18px;
-  padding: 0px 300px 0px 300px;
-
-}
-
-.showLabel {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.content{
-  font-size: 18px;
-}
-
-.button {
-  margin-left: 20px;
-  margin-bottom: 30px;
-  text-align: center;
-  padding: 8px;
-  border-radius: 15px;
-  display:block;
-  height: 50px;
-  width: 140px;
-  background-color: #4267B3;
-  border-color: #4267B3;
-  color: white;
-  font-size: 18px;
-}
-
-.subtitle {
-  margin-left: 35px;
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+ 
+ .header {
+   min-width: 100%;
+   font-weight: 900;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   color: var(--dark-blue);
+   background-color: #4267B3;
+   color: white;
+ }
+ 
+ .title {
+   font-size: 25px;
+   padding: 15px 0px 15px 30px;
+   background-color:#4267B3;
+   margin-right: auto;
+ }
+ 
+ .all .buckets {
+   font-size: 20px;
+   padding-top: 30px;
+   padding: 20px 20px 20px 100px; 
+   color: white;
+ }
+ 
+ .all .tasks{
+   font-size: 20px;
+   padding-top: 30px;
+   padding: 25px 40px 20px 40px;
+   background-color:#616771;
+   color: white;
+ }
+ 
+ .body {
+     background-color: #ededed;
+     height: 100vh;
+     font-family: "DM Sans", sans-serif;
+     display: flex;
+     flex-direction: column;
+     color:#1b2459;
+   }
+   
+ .createBtn {
+   text-align: center;
+   border-radius: 15px;
+   display:block;
+   height: 50px;
+   width: 140px;
+   background-color: #4267B3;
+   border-color: #4267B3;
+   color: white;
+   font-size: 18px;
+ }
+ 
+ .Back {
+     text-align: center;
+     margin-top: 15px;
+     margin-left:1200px;
+     padding: 8px;
+     border-radius: 15px;
+     display:block;
+     height: 40px;
+     width: 110px;
+     background-color:#4267B3;
+     border-color: #4267B3;
+     color: white;
+     font-size: 18px;
+ }
+ 
+ .taskName {
+   position: flex;
+   text-align:center;
+   font-size: 35px;
+   font-weight: bold;
+ }
+ 
+ 
+ .desLabel {
+   font-size: 20px;
+   font-weight: bold;
+   text-align:center;
+ }
+ 
+ .description{
+   text-align:center;
+   font-size: 18px;
+   padding: 0px 300px 0px 300px;
+ 
+ }
+ 
+ .showLabel {
+   font-size: 20px;
+   font-weight: bold;
+ }
+ 
+ .content{
+   font-size: 18px;
+ }
+ 
+ .button {
+   margin-left: 20px;
+   margin-bottom: 50px;
+   text-align: center;
+   padding: 8px;
+   border-radius: 15px;
+   display:block;
+   height: 50px;
+   width: 140px;
+   background-color: #4267B3;
+   border-color: #4267B3;
+   color: white;
+   font-size: 18px;
+ }
+ 
+ .subtitle {
+  margin-left: 65px;
   font-size: 30px;
   font-weight: bold;
 }
 
 .form {
-  margin-left: 35px;
+  margin-left: 65px;
 }
-
-.label {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1b2459;
-  padding: 10px;
-}
-
-.textField {
-  margin-top: 10px;
-  margin-bottom:25px;
-  margin-left: 35px;
-  width:315px;
-  border-left: white;
-  border-right: 2px inset white;
-  border-bottom: 3px inset;
-  border-top: solid #616771;
-  border-top-width: 10px;
-  padding: 10px;
-}
-
-.textArea {
-  margin-top: 10px;
-  margin-bottom:25px;
-  margin-left: 35px;
-  width:315px;
-  height: 300px;
-  border-left: white;
-  border-right: 2px inset white;
-  border-bottom: 3px inset;
-  border-top: solid #616771;
-  border-top-width: 10px;
-  padding: 10px;
-}
-
-.submitButton{
-  margin-bottom:25px;
-  margin-top: -170px;
-  margin-left: 400px;
-  border-radius: 10%/30%;
-  display: block;
-  height: 40px;
-  width: 150px;
-  background-color: #4267B3;
-  border-color: #4267B3;
-  color: white;
-  font-size: 17px;
-}
-
-.deleteButton{
+ 
+ .label {
+   font-size: 20px;
+   font-weight: bold;
+   color: #1b2459;
+   padding: 10px;
+ }
+ 
+ .textField {
+   margin-top: 10px;
+   margin-bottom:25px;
+   margin-left: 35px;
+   width:315px;
+   border-left: white;
+   border-right: 2px inset white;
+   border-bottom: 3px inset;
+   border-top: solid #616771;
+   border-top-width: 10px;
+   padding: 10px;
+ }
+ 
+ .textArea {
+   margin-top: 10px;
+   margin-bottom:25px;
+   margin-left: 35px;
+   width:315px;
+   height: 300px;
+   border-left: white;
+   border-right: 2px inset white;
+   border-bottom: 3px inset;
+   border-top: solid #616771;
+   border-top-width: 10px;
+   padding: 10px;
+ }
+ 
+ .submitButton{
+   margin-bottom:25px;
+   margin-top: -170px;
+   margin-left: 400px;
+   border-radius: 10%/30%;
+   display: block;
+   height: 40px;
+   width: 150px;
+   background-color: #4267B3;
+   border-color: #4267B3;
+   color: white;
+   font-size: 17px;
+ }
+ 
+ .cancelButton{
   margin-bottom:25px;
   margin-top: 350px;
   margin-left: -150px;
@@ -158,9 +203,11 @@
   border-color: #4267B3;
   color: white;
   font-size: 17px;
+  text-align: center;
+  padding: 8px;
 }
 
-.cancelButton{
+.deleteButton{
   margin-bottom:25px;
   margin-top: 400px;
   margin-left: -150px;
@@ -255,6 +302,7 @@
   border-color: #4267B3;
   color: white;
   font-size: 17px;
+  padding: 8px;
 }
 
 .cancelCreateButton{
@@ -272,3 +320,12 @@
   font-size: 17px;
   padding: 8px;
 }
+ 
+ .bucketList {
+   height:auto;
+   border-radius: 5px;
+   padding: 10px;
+   border-color: #616771;
+   background-color: white;
+   font-size: 16px;
+ }

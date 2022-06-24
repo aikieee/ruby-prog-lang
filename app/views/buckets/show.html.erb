@@ -1,3 +1,4 @@
+<br>
 <%= link_to "Back", buckets_path, class: "Back btn-primary" %>
 <br>
 
@@ -11,24 +12,24 @@
 <div class="container text-center">
     <div class="row align-items-center justify-content-center">
         <div class="col-4">
-            <h5 class="showLabel">Pending Tasks</h5>
+            <p class="showLabel">Pending Tasks</p>
         </div>
         <div class="col-4">
-            <h5 class="showLabel">Completed Tasks</h5>
+            <p class="showLabel">Completed Tasks</p>
         </div>
     </div>
 
 
-<div class="row align-items-center justify-content-center">
+<div class="row align-self-start justify-content-center">
     <div class="col-4">
         <% @bucket.tasks_by_status("Pending").each do |task| %>
-        <span class= "content" style="font-weight:normal"><%= link_to task.name, task_path(task) %></span>
+        <p class= "content" style="font-weight:normal"><%= link_to task.name, task_path(task) %></p>
         <% end %>
     </div>
 
     <div class="col-4">
         <% @bucket.tasks_by_status("Completed").each do |task| %>
-        <span class= "content" style="font-weight:normal"><%= link_to task.name, task_path(task) %></span>
+        <p class= "content" style="font-weight:normal"><%= link_to task.name, task_path(task) %></p>
         <% end %>
     </div>
 <div>
@@ -41,6 +42,6 @@
         <%= button_to "Edit Bucket", edit_bucket_path(@bucket), class:"button btn-primary", method: :get %>
     </div>
     <div class = "col-2">
-        <%= button_to "+ Add Task", new_task_path, class: "button btn-primary", method: :get %></span></h6>
+        <%= button_to "+ Add Task", new_task_path, class: "button btn-primary", method: :get %></span>
     </div>
 </div>
