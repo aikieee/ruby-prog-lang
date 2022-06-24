@@ -16,5 +16,7 @@
         <div class="p-2"><%= f.collection_select :priority_id, Priority.order(:name),:id, :name %><br></div>
         <div class="p-2"><%= f.check_box :status, {}, "Completed", "Pending" %> Completed?<br></div>
         <div class="p-2"><%= f.submit %></div>
+        <div class="p-2"><%= f.check_box :status, {}, "Completed", "Pending" %> Done <br></div>
+        <div class="p-2"><%= f.submit "Create Task", class: "btn btn-primary" %></div>
     <% end %>
 </div>
