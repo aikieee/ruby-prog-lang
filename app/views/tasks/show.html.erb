@@ -1,4 +1,7 @@
-<br><br><br>
+<div class = "mx-4 mt-4">
+    <%= link_to "Back", tasks_path, class: "btn btn-primary" %>
+</div>
+<br>
 <div class = "d-flex align-items-center justify-content-center">
     <h1>Task Name: <%= @task.name %></h1>
 </div>
@@ -12,5 +15,5 @@
     <h6>Status: <%= @task.status %></h6><br><br>
 </div>
 <div class = "d-flex align-items-center justify-content-center">
-    <%= button_to "Edit task", edit_task_path(@task), method: :get %>
+    <%= button_to "Edit Task",  edit_task_path(@task), class: "btn btn-primary", method: :get %>
 </div>
