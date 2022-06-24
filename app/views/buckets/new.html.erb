@@ -1,14 +1,13 @@
-<br><br><br>
-<div class = "d-flex align-items-center justify-content-center">
-    <h1>CREATE NEW BUCKET</h1>
+<div class = "subtitle d-flex justify-content-start">
+    Create New Bucket
 </div>
-
-<div class="d-flex flex-column align-items-center justify-content-center">
+<br><br>
+<div class="form d-flex justify-content-start">
     <%= form_for(@bucket) do |f| %>
-        <div class="p-2"> <%= f.label :name%> <br> </div>
-        <div class="p-2"> <%= f.text_field :name%> <br> </div>
-        <div class="p-2"> <br><%= f.label :description%> <br> </div>
-        <div class="p-2"> <%= f.text_area :description%> <br> </div>
-        <div class="p-2"> <br><%= f.submit "Create Bucket", class: "btn btn-primary"%> <br> </div>
+        <%= f.label :name, class: "label"%><br>
+        <%= f.text_field :name, class: "textField"%><br>
+        <%= f.label :description,  class: "label"%><br>
+        <%= f.text_area :description, class: "textArea"%><br>
+        <%= f.submit "Create Bucket", class: "submitButton"%><br>
     <% end %>
 </div>
