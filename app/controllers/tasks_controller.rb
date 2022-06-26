@@ -14,6 +14,10 @@ class TasksController < ApplicationController
         @task.save
         @task.bucket.update_status
         redirect_to task_path(@task)
+    rescue NoMethodError
+        render :file => "#{Rails.root}/public/alert.html"
+    rescue ActionController::UrlGenerationError
+        render :file => "#{Rails.root}/public/alert.html"
     end
 
     def show
