@@ -14,6 +14,8 @@ class BucketsController < ApplicationController
         @bucket.status = "Empty"
         @bucket.save
         redirect_to bucket_path(@bucket)
+    rescue ActionController::UrlGenerationError
+        render :file => "#{Rails.root}/public/alert.html"
     end
 
     def show
