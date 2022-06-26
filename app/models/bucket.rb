@@ -1,5 +1,6 @@
 class Bucket < ApplicationRecord
     has_many :tasks
+    validates :name, presence: true
 
     def self.get_by_status(status)
         self.all.select do |bucket|
