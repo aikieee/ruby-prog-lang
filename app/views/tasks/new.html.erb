@@ -16,7 +16,6 @@
         <div><br><%= f.collection_select :bucket_id, Bucket.order(:name),:id, :name, {}, {class: "bucketField"} %></div>
         <div><%= f.label "Priority", class: "priorityLabel" %></div>
         <div><%= f.collection_select :priority_id, Priority.order(:name),:id, :name, {}, {class: "priorityField"}%><br></div>
-         <div class="checkLabel"><%= f.check_box :status, {}, "Completed", "Pending" %>  Done<br></div>
     </div>
 </div>
 
