@@ -26,21 +26,30 @@
         <p class= "taskList"><span style="font-weight:normal"><%= link_to task.name, task_path(task), class: "link-dark" %><br>
          <button class="btn btn-outline-primary btn-xs" disabled> <%= task.bucket.name %> </button>
 
-        <button class="btn btn-outline-danger btn-xs m-2" disabled>
-          <% Task.all.each do |priority_id| %>
-          <% end %>
-               <%= if task.priority_id == 1
-                         "Urgent"
-                    elsif task.priority_id == 2
-                         "High"
-                    elsif task.priority_id == 3
-                         "Normal"
-                    elsif task.priority_id == 4
-                         "Low"
-                    else
-                         "No Priority" 
-                    end %>
-        </button>
+        
+          <%# <% Task.all.each do |priority_id| %> 
+          <%# <% end %> 
+              <% if task.priority_id == 1 %>
+                    <button class="btn btn-danger btn-xs m-2" disabled>
+                        <%= "Urgent" %> 
+                    </button>
+                <% elsif task.priority_id == 2 %> 
+                      <button class="btn btn-warning btn-xs m-2" disabled>
+                        <%= "High" %> 
+                    </button>
+                 <% elsif task.priority_id == 3 %>
+                      <button class="btn btn-primary btn-xs m-2" disabled>
+                        <%= "Normal" %> 
+                    </button>
+
+                <% elsif task.priority_id == 4 %>
+                        <button class="btn btn-secondary btn-xs m-2" disabled>
+                        <%= "Low" %> 
+                    </button>
+                <% else %>
+                      <%= "No Priority" %> 
+                <% end %>
+        
         </span></p>
         <% end %>
    </div>

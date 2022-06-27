@@ -117,6 +117,19 @@
  .content{
    font-size: 18px;
  }
+
+ #urgent {
+  color: #8b0000;
+ }
+ #high {
+  color: #f9b100;
+ }
+ #normal {
+  color: #02043c;
+ }
+ #low {
+  color: #002a0b;
+ }
  
  .button {
    margin-left: 20px;
