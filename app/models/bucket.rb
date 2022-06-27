@@ -1,5 +1,5 @@
 class Bucket < ApplicationRecord
-    has_many :tasks
+    has_many :tasks, :dependent => :destroy
     validates :name, presence: true
 
     def self.get_by_status(status)
@@ -24,4 +24,5 @@ class Bucket < ApplicationRecord
             task.status == status
         end
     end
+
 end

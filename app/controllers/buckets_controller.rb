@@ -20,6 +20,8 @@ class BucketsController < ApplicationController
 
     def show
         @bucket = Bucket.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+        redirect_to root_path                   #if the bucket id is deleted or no longer available, this will redirect to the root path
     end
 
     def edit
@@ -34,8 +36,9 @@ class BucketsController < ApplicationController
     end
 
     def destroy
-        @bucket = Bucket.find(params[:id]).destroy
-        redirect_to buckets_path
+        @bucket = Bucket.find(params[:id])
+        @bucket.destroy
+        redirect_to bucket_path
     end
 
     private
