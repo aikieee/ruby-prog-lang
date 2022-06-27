@@ -7,7 +7,7 @@
   <div class="d-flex flex-row">
     <%= form_for(@task) do |f| %>
       <%= f.label :name, class: "content"%><br>
-      <%= f.text_field :name, class: "textField" %><br>
+      <%= f.text_field :name, class: "textField", maxlength: 50%><br>
       <%= f.label :description, class: "content" %><br>
       <%= f.text_area :description, class: "textArea" %><br>
     </div>
