@@ -23,8 +23,22 @@
   </div>
     <div class="col-4">
         <% @pending_tasks.each do |task| %>
-        <p class= "taskList"><span style="font-weight:normal"><%= link_to task.name, task_path(task) %>
-        <button type="button" class="btn btn-outline-danger ml-5" disabled>Priority</button>
+        <p class= "taskList"><span style="font-weight:normal"><%= link_to task.name, task_path(task) %><br>
+        <button type="button" class="btn btn-outline-danger" disabled>
+        <% Task.all.each do |priority_id| %>
+        <% end %>
+            <%= if task.priority_id == 1
+                     priority = "Urgent"
+                elsif task.priority_id == 2
+                     priority = "High"
+                elsif task.priority_id == 3
+                     priority = "Normal"
+                elsif task.priority_id == 4
+                     priority = "Low"
+                else
+                     priority = "No Priority" 
+                end %>
+        </button>
         </span></p>
         <% end %>
    </div>
