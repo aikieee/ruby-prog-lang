@@ -28,15 +28,15 @@
         <% Task.all.each do |priority_id| %>
         <% end %>
             <%= if task.priority_id == 1
-                     priority = "Urgent"
+                     "Urgent"
                 elsif task.priority_id == 2
-                     priority = "High"
+                     "High"
                 elsif task.priority_id == 3
-                     priority = "Normal"
+                     "Normal"
                 elsif task.priority_id == 4
-                     priority = "Low"
+                     "Low"
                 else
-                     priority = "No Priority" 
+                     "No Priority" 
                 end %>
         </button>
         </span></p>
