@@ -21,7 +21,7 @@
         <p><span style="font-weight:normal">
         <%= button_to "+ New", new_task_path, class: "newBtn btn-primary", method: :get %></span></p>
   </div>
-    <div class="col-4">
+    <div type = "button" class="col-4">
         <% @pending_tasks.each do |task| %>
         <p class= "taskList"><span style="font-weight:normal"><%= link_to task.name, task_path(task) %><br>
         <button type="button" class="btn btn-outline-danger" disabled>
