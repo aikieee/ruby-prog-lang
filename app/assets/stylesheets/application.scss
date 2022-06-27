@@ -29,7 +29,23 @@
    background-color: #4267B3;
    color: white;
  }
- 
+
+ .footer {
+  min-width: 100%;
+  font-weight: bold;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #4267B3;
+  color: white;
+  text-align: center;
+ }
+
+ .credits {
+  padding: 5px 5px 0px 5px;
+  color: white;
+ }
+
  .title {
    font-size: 25px;
    padding: 15px 0px 15px 30px;
@@ -116,6 +132,19 @@
  
  .content{
    font-size: 18px;
+ }
+
+ #urgent {
+  color: #8b0000;
+ }
+ #high {
+  color: #f9b100;
+ }
+ #normal {
+  color: #02043c;
+ }
+ #low {
+  color: #002a0b;
  }
  
  .button {

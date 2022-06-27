@@ -33,19 +33,19 @@
         </div>
 
         <div class="col-4">
-            <p class = "content"> 
-                <%= if @task.priority_id == 1
-                    "Urgent"
-                elsif @task.priority_id == 2
-                    "High"
-                elsif @task.priority_id == 3
-                    "Normal"
-                elsif @task.priority_id == 4
-                    "Low"
-                else
-                    "No Priority"
-                end %>
-            </p>
+        <p class="content">
+            <% if @task.priority_id == 1 %>
+                        <%= "Urgent" %>
+                <% elsif @task.priority_id == 2 %> 
+                        <%= "High" %> 
+                 <% elsif @task.priority_id == 3 %>
+                        <%= "Normal" %> 
+                <% elsif @task.priority_id == 4 %>
+                        <%= "Low" %> 
+                <% else %>
+                      <%= "No Priority" %> 
+                <% end %>
+        </p>
         </div>
 
         <div class="col-4">
